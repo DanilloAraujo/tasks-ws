@@ -19,3 +19,4 @@ Enter with your username and password
 
 Create OAuth Application
 
+Import Tasks.postman_collection.json to yout postman and update the Client ID and Client Secret.

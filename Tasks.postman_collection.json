@@ -1,0 +1,341 @@
+{
+	"info": {
+		"name": "Tasks",
+		"_postman_id": "cccbdda7-8c8d-2c5a-8b86-09d9f553fb81",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "oauth ",
+			"description": "",
+			"item": [
+				{
+					"name": "Refresh Token",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Device-Token",
+								"value": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+							},
+							{
+								"key": "Device-Agent",
+								"value": "iOS_SANDBOX | iOS | Android | Web"
+							},
+							{
+								"key": "Accept-Language",
+								"value": "pt-br"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "client_id",
+									"value": "Wb96T3sKqueqdGxLEFDeiG7USWbpF2GWrmMJqnBd",
+									"type": "text"
+								},
+								{
+									"key": "client_secret",
+									"value": "LkSUPmVd8GsxZCJ3uJ4NdKZctHpujLAFljGZLwYgBTMV1TwAhlPHKFMYMeLPZ44TpX4ydssbodz1dPxh0GM4GlHBgkg31tsPBq43YdByds0jH5GyQ6yM11M7xy1PXjtt",
+									"type": "text"
+								},
+								{
+									"key": "grant_type",
+									"value": "refresh_token",
+									"type": "text"
+								},
+								{
+									"key": "refresh_token",
+									"value": "2ANvP6Z7pn8dE38G5xBRDRwE4MiZ8p",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/oauth/token/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"oauth",
+								"token",
+								""
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Login with password",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Device-Token",
+								"value": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+								"disabled": true
+							},
+							{
+								"key": "Device-Agent",
+								"value": "Web"
+							},
+							{
+								"key": "Accept-Language",
+								"value": "pt-br"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "client_id",
+									"value": "Wb96T3sKqueqdGxLEFDeiG7USWbpF2GWrmMJqnBd",
+									"type": "text"
+								},
+								{
+									"key": "client_secret",
+									"value": "LkSUPmVd8GsxZCJ3uJ4NdKZctHpujLAFljGZLwYgBTMV1TwAhlPHKFMYMeLPZ44TpX4ydssbodz1dPxh0GM4GlHBgkg31tsPBq43YdByds0jH5GyQ6yM11M7xy1PXjtt",
+									"type": "text"
+								},
+								{
+									"key": "grant_type",
+									"value": "password",
+									"type": "text"
+								},
+								{
+									"key": "username",
+									"value": "admin@teste.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "abcd@1234",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/oauth/token/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"oauth",
+								"token",
+								""
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Tasks",
+			"description": "",
+			"item": [
+				{
+					"name": "List Tasks",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept-Language",
+								"value": "pt-br"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer IIfpq78VIaxSTkf4wmFpOO26ijLeKS"
+							}
+						],
+						"body": {},
+						"url": {
+							"raw": "http://localhost:8000/api/v1/tasks/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"tasks",
+								""
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Create New Task",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept-Language",
+								"value": "pt-br"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer IIfpq78VIaxSTkf4wmFpOO26ijLeKS"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n            \"expiration_date\": \"2017-12-14\",\n            \"title\": \"teste\",\n            \"description\": \"aslekfmlaksemflasef\",\n            \"is_complete\": false\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/v1/tasks/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"tasks",
+								""
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Update Task",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept-Language",
+								"value": "pt-br"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer IIfpq78VIaxSTkf4wmFpOO26ijLeKS"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n            \"expiration_date\": \"2017-12-14\",\n            \"title\": \"teste\",\n            \"description\": \"aslekfmlaksemflasef\",\n            \"is_complete\": true\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/v1/tasks/1152f660-c2e3-4baa-bddf-8b1f7f485a0c/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"tasks",
+								"1152f660-c2e3-4baa-bddf-8b1f7f485a0c",
+								""
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Task",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept-Language",
+								"value": "pt-br"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer IIfpq78VIaxSTkf4wmFpOO26ijLeKS"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/v1/tasks/eda3a105-4011-46bd-b0c4-3dde30ab70de/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"tasks",
+								"eda3a105-4011-46bd-b0c4-3dde30ab70de",
+								""
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
