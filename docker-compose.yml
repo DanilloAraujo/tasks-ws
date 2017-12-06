@@ -1,0 +1,35 @@
+
+version: '2'
+
+
+volumes:
+  postgres_data: {}
+
+
+services:
+  postgres:
+    build:
+      context: .
+      dockerfile: compose/postgres/Dockerfile
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    env_file:
+      - .env
+  django:
+    build:
+      context: .
+      dockerfile: compose/django/Dockerfile
+    volumes:
+      - .:/app
+    env_file:
+      - .env
+    command: python /app/manage.py runserver 0.0.0.0:8000
+    ports:
+      - "8000:8000"
+    links:
+      - postgres
+    env_file:
+      - .env
+    depends_on:
+      - postgres
+
