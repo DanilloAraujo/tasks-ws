@@ -20,3 +20,7 @@ Enter with your username and password
 Create OAuth Application
 
 Import Tasks.postman_collection.json to yout postman and update the Client ID and Client Secret.
+
+
+## App Design
+For the App Design open the Sketch File "Task App Design"
